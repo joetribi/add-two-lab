@@ -1,0 +1,46 @@
+; Lab 01: Add Two Lab
+; Name:
+; Course / Section:
+; Date:
+;
+; Target: 32-bit Windows MASM (x86 / Win32).
+; Requires a configured MASM project and the Windows SDK libraries.
+; This starter does not require Irvine32.inc.
+;
+; Calculate (20 + 6) - (9 + 1) using the steps below.
+; Add a comment explaining every instruction you write.
+; Predict register values before running, then verify in the debugger.
+; Record your table values in decimal.
+
+.386
+.model flat, stdcall
+.stack 4096
+
+ExitProcess PROTO, dwExitCode:DWORD
+INCLUDELIB kernel32.lib
+
+.code
+main PROC
+
+    ; TODO 1: Move 20 into EAX.
+
+    ; TODO 2: Move 6 into EBX.
+
+    ; TODO 3: Add EBX to EAX.
+
+    ; TODO 4: Move 9 into ECX.
+
+    ; TODO 5: Increment ECX by one.
+
+    ; TODO 6: Subtract ECX from EAX.
+
+    ; TODO 7: Copy the final result from EAX into EDX.
+
+    ; Set a breakpoint on the NOP below to inspect the final registers.
+    ; NOP performs no operation and leaves the register values unchanged.
+    ; Inspect the registers before executing the exit code.
+    nop
+
+    INVOKE ExitProcess, 0     ; End the program.
+main ENDP
+END main
